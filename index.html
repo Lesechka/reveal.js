@@ -11,7 +11,6 @@
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -24,8 +23,230 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section class = 'slide1'>
+<h1> CSS Grid Layout </h1>
+<h2> Created by <span class = 'info'> Alesia Bandarenka </span></h2>
+<h3> e-mail: <span class = 'info'> littlecare@mail.ru </span></h3>
+				</section>
+				<section class = 'slide2'>
+					<p> <b>CSS Grid Layout</b> is a new, powerful layout system
+						that allows a web page to easily be divided into columns and rows.</p>
+<p>This CSS module defines a two-dimensional grid-based layout system,
+	optimized for user interface design.
+</p>
+				</section>
+				<section class = 'slide3'>
+					<p>The 'modern' CSS Grid Layout specification began as a first public
+						  working draft published on 7 April 2011.</p>
+					TABLE -> FLOAT -> POSITIONING AND INLINE-BLOCK -> BOX MODEL -> CSS flex box -> CSS grid layout
+				</section>
+					<section class = 'slide4'>
+						<h2>Groups of properties</h2>
+      <h3>CSS Grid defines according to four groups of properties:</h3>
+<ol><li>The explicit grid</li>
+<li>Gaps</li>
+<li>Aligning things</li>
+<li>The implicit grid</li>
+</section>
+					<section class = 'slide5'>
+						<section class = 'slide5-1'>
+						<h2>The explicit grid</h2>
+						<h3>You can use two properties to make an explicit grid:</h3>
+						<ol>
+							<li>grid-template-columns</li>
+              <li>grid-template-rows</li>
+          </ol>
+				</section>
+					<section class = 'slide5-2'>
+					<img src = 'assets/slide5-2.png' height = '300' width = '900'>
+					<p>grid-template-columns create a new column for each length value you add to it.
+grid-template-rows work the same way. </p>
+				</section>
+					<section class = 'slide5-3'>
+						<img src = 'assets/slide5-3.png' height = '500' width = '900'>
+        </section>
+			</section>
+			<section class = 'slide6'>
+				<section class = 'slide6-1'>
+					<h2>Positioning items in your grid</h2>
+					<h3>You can control the position of items in a grid with two properties:</h3>
+					<ol>
+						<li>grid-column</li>
+					  <li>grid-row</li>
+					</ol>
+				</section>
+				<section class = 'slide6-2'>
+				<img src = 'assets/slide6-2.png' height = '400' width = '1000' >
+				<p> A shorthand for grid-column-start and grid-column-end
+					works this way: grid-column-start / grid-column-end.</p>
+			</section>
+			<section class = 'slide6-3'>
+				<img src = 'assets/slide6-3.png' height = '300' width = '1000'>
+				<p> You can also use the span keyword to tell CSS Grid
+					how many columns you want your item to take up.</p>
+			</section>
+			<section class = 'slide6-4'>
+				<img src = 'assets/slide6-4.png' height = '500' width = '1000'>
+			</section>
+			<section class = 'slide6-5' height = '600' width = '1000'>
+				<img src = 'assets/slide6-5.png'>
+				<p> A shorthand for grid-row-start and grid-row-end
+					works this way: grid-row-start / grid-row-end.</p>
+			</section>
+			<section class = 'slide6-6'>
+				<img src = 'assets/slide6-6.png' height = '500' width = '1000'>
+			</section>
+				</section>
+			<section class = 'slide7'>
+				<section class = 'slide7-1'>
+<h2>Positioning items in named areas</h2>
+<p>To create a grid area, you should use grid-template-areas on the grid.</p>
+</section>
+<section class = 'slide7-2'>
+<h3>Some notes on creating grid areas:</h3>
+<ol>
+	<li>You must name every grid area</li>
+  <li>If you don’t want to name an area, use . </li>
+  <li>Each group separated by inverted commas ("row1" "row2") signifies a row</li>
+  <li>Each value within inverted commas ("area1 area2") signifies an area</li>
+</ol>
+</section>
+<section class = 'slide7-3'>
+<img src = 'assets/slide7-3.png' height = '250' width = '900'>
+<p>To place items <b>in</b> a grid area, you use the grid-area property on the grid item.
+To place items <b>on</b> a grid-area, you use grid-area.
+</p>
+</section>
+<section class = 'slide7-4'>
+<img src = 'assets/slide7-4.png' height = '300' width = '900'>
+</section>
+<section class = 'slide7-5' >
+	<img src = 'assets/slide7-5.png' height = '500' width = '1000'>
+</section>
+			</section>
+			<section class = 'slide8'>
+				<section class = 'slide8-1'>
+					<h2>Gaps</h2>
+					<h3>There are three properties to remember:</h3>
+<ol>
+	<li>grid-column-gap</li>
+  <li>grid-row-gap</li>
+  <li>grid-gap</li>
+</ol>
+				</section>
+				<section class = 'slide8-2'>
+					<img src = 'assets/slide8-2-1.png' height = '300' width = '300'>
+					<img src = 'assets/slide8-2-2.png' height = '300' width = '300'>
+				</section>
+				<section class = 'slide8-3'>
+					<img src = 'assets/slide8-3.png' height = '500' width = '1000'>
+				</section>
+			</section>
+			<section class = 'slide9'>
+				<section class = 'slide9-1'>
+					<h3>There are six properties to align things:</h3>
+					<ol>
+						<li>justify-content</li>
+					  <li>align-content</li>
+					  <li>justify-items</li>
+					  <li>align-items</li>
+					  <li>justify-self</li>
+					  <li>align-self</li>
+</ol>
+</section>
+				<section class = 'slide9-2'>
+					<h2>Two groups of patterns:</h2>
+<ul>
+	<li>The first group is justify vs align</li>
+  <li>The second group is content, items, and self</li>
+</ul>
+				</section>
+				<section class = 'slide9-3'>
+					<h2>Justify vs align</h2>
+<h3>Each CSS Grid has two axes:</h3>
+<ol>
+	<li>The inline-axis</li>
+  <li>The block-axis</li>
+</ol>
+<p>Inline-axis reads left to right. Block-axis reads top to bottom</p>
+				</section>
+				<section class = 'slide9-4'>
+					<img src = 'assets/slide9-4.png' height = '400' width = '800'>
+					<h3>So the inline and block axis is:</h3>
+<ul>
+	<li>Inline: left to right</li>
+	<li>Block: top to bottom</li>
+</ul>
+</section>
+<section class = 'slide9-5'>
+	<h2>Content, items, and self</h2>
+	<p>justify-content and align-content lets you align the grid itself
+		to the available space outside of the grid.</p>
+	<img src = 'assets/slide9-5.png' height = '250' width = '900'>
+</section>
+<section class = 'slide9-6'>
+	<img src = 'assets/slide9-6.png' height = '600' width = '1000'>
+</section>
+<section class = 'slider9-7' height = '300' width = '1000'>
+	<p>justify-items and align-items lets you align grid-items
+		to any available whitespace in their respective cells. </p>
+	<img src = 'assets/slide9-7.png'>
+</section>
+<section class = 'slide9-8'>
+	<img src = 'assets/slide9-8.png' height = '600' width = '600'>
+</section>
+<section class = 'slide9-9'>
+	<p>justify-self and align-self does the same thing as justify-items
+		and align-items. The difference is it lets you change the alignment
+		for only one grid-item. </p>
+	<img src = 'assets/slide9-9.png' height = '250' width = '1000'>
+</section>
+			</section>
+			<section class = 'slider10'>
+				<section class = 'slider10-1'>
+					<h2>Implicit Grid</h2>
+					<img src = 'assets/slide10-1.png' height = '250' width = '1000'>
+				</section>
+				<section class = 'slider10-2'>
+					<h2>But we have six items!</h2>
+					<img src = 'assets/slide10-2.png' height = '400' width = '1000'>
+				</section>
+				<section class = 'slider10-3'>
+					<p><b>You can adjust the automatically created column(s) <br>
+						or row(s) with these two properties:</b></p>
+<ol>
+	<li>grid-auto-columns</li>
+	<li>grid-auto-rows</li>
+</ol>
+					<img src = 'assets/slide10-3.png' height = '300' width = '1000'>
+				</section>
+				<section class = 'slide10-4'>
+					<img src = 'assets/slide10-4.png' height = '600' width = '1000'>
+				</section>
+					</section>
+					<section class = 'slide11'>
+						<h2>Conclusion</h2>
+						<h3>"Why CSS Grid?"</h3>
+						<ul>
+							<li>cleaner markups;</li>
+							<li>increase of maintainability and flexibility for your layouts;</li>
+							<li>easy to achieve more complicated layouts as you can work with columns and rows simultaneously;</li>
+							<li>the current support is at 88.3% of the global website traffic, so it is definitely okay.</li>
+						</ul>
+</section>
+<section class = 'slide12'>
+	<h3>Sources:</h3>
+	<ul>
+		<li>https://rachelandrew.co.uk/archives/2015/11/03/three-years-with-css-grid-layout/</li>
+		<li>https://medium.freecodecamp.org/css-grid-a-simple-layout-design-tutorial-5312a4a8bcaf</li>
+		<li>https://css-tricks.com/snippets/css/complete-guide-grid/</li>
+		<li>https://www.smashingmagazine.com/2018/04/best-practices-grid-layout/</li>
+		<li>https://zellwk.com/blog/remember-css-grid-properties/</li>
+</ul>
+</section>
+<section class = 'slide13'>
+	<h1>Thanks for attention!</h1>
+</section>
 			</div>
 		</div>
 
