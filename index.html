@@ -45,11 +45,21 @@ arbitrary slots in a predefined flexible or fixed-size layout grid.
 					<p>The 'modern' CSS Grid Layout specification began as a first public
 						  working draft published on 7 April 2011.</p>
 					<p>TABLE -> FLOAT -> POSITIONING AND INLINE-BLOCK -> BOX MODEL -> CSS flex box -> CSS grid layout</p>
-					<aside class = 'notes'> CSS Grid  was first presented to W3C by a Microsoft team in 2012.
-The  Microsoft team also presented a real implementation of the grid layout.
-Several people started playing with it and spreading the word about it.
-Creators of CSS Grid think that grid-based layouts have been a goal of CSS.
- Flexbox helped out, but it's intended for simpler one-dimensional layouts.
+					<aside class = 'notes'> In the beginning, I want to mention some interesting
+						facts about history of Grid Layout. CSS Grid  has been through a lot
+of discussions and implementations since it was first presented to W3C by a Microsoft team in 2012.
+The difference was that, in this time, the Microsoft team also presented a real
+ implementation of the grid layout. Several people started playing with it and spreading the word about it.
+ Creators of CSS Grid Layout think that grid-based layouts have been a goal of
+ CSS since the beginning. They remember that CSS started as something very simple.
+  CSS has always been used to lay out web pages, but it's never done a very good
+	job of it. First, tables were used, then floats, positioning and inline-block,
+	but all of these methods were essentially hacks and left out a lot of
+	important functionality (vertical centering, for instance).
+	Flexbox helped out, but it's intended for simpler one-dimensional layouts,
+	not complex two-dimensional ones.
+ The aim of my presentation wasn’t telling you about difference between Grid Layout and Flexbox.
+  However, I should mention that Flexbox and Grid actually work very well together.
 </aside>
 				</section>
 					<section class = 'slide4'>
@@ -62,6 +72,8 @@ Creators of CSS Grid think that grid-based layouts have been a goal of CSS.
 <aside class = 'notes'>The syntax for CSS Grid Layout isn’t easy to remember.
 	 But you should know it to be confident when you use CSS Grid.
 To use CSS Grid effectively, you need to remember its properties and values.
+I’ve read a really good article by Zell about an easy way to remember the most
+common CSS Grid properties today. This will help you to use CSS Grid without permanent googling.
 </aside>
 </section>
 					<section class = 'slide5'>
@@ -72,7 +84,8 @@ To use CSS Grid effectively, you need to remember its properties and values.
 							<li>grid-template-columns</li>
               <li>grid-template-rows</li>
           </ol>
-					<aside class = 'notes'> If you declare the number of rows and columns
+					<aside class = 'notes'> Let’s say you want to make a grid with 4 columns and 3 rows.
+						If you declare the number of rows and columns
 						in your grid, the grid is explicit. grid-template-columns lets you
 						define the number of columns.grid-template-rows lets you define the number of rows.</aside>
 				</section>
@@ -100,7 +113,9 @@ grid-template-rows work the same way.</aside>
 						<li>grid-column</li>
 					  <li>grid-row</li>
 					</ol>
-					<aside class = 'notes'>These two properties can only be used on a grid item.</aside>
+					<aside class = 'notes'>These two properties can only be used on a grid item.
+					grid-column lets you choose which column(s) you want to place your grid item
+				</aside>
 				</section>
 				<section class = 'slide6-2'>
 				<img src = 'assets/slide6-2.png' height = '400' width = '1000' >
@@ -119,6 +134,9 @@ grid-template-rows work the same way.</aside>
 				<img src = 'assets/slide6-5.png'>
 				<p> A shorthand for grid-row-start and grid-row-end
 					works this way: grid-row-start / grid-row-end.</p>
+					<aside class = 'notes'>grid-row lets you choose which row(s) you want
+						to place your grid item.
+					</aside>
 			</section>
 			<section class = 'slide6-6'>
 				<img src = 'assets/slide6-6.png' height = '500' width = '1000'>
@@ -143,7 +161,7 @@ grid-template-rows work the same way.</aside>
 <section class = 'slide7-3'>
 <img src = 'assets/slide7-3.png' height = '250' width = '900'>
 <aside class = 'notes'>The example below has three grid areas:
-1.	header on the first two and takes up 4 columns
+1.	header on the first row and takes up 4 columns
 2.	main on the second row and takes up the middle 2 columns
 3.	footer on the third row and takes up 4 columns
 </aside>
@@ -193,7 +211,9 @@ grid-row-gap determines the space between rows.
 					  <li>justify-self</li>
 					  <li>align-self</li>
 </ol>
-<aside class = 'notes'>You can see two groups of patterns here:
+<aside class = 'notes'>Aligning things
+This is where many people get confused.
+You can see two groups of patterns here:
 •	The first group is justify vs align
 •	The second group is content, items, and self
 </aside>
