@@ -28,6 +28,7 @@
 <h2> Created by <span class = 'info'> Alesia Bandarenka </span></h2>
 <h3> e-mail: <span class = 'info'> <a href="mailto:littlecare@mail.ru ">littlecare@mail.ru </a></span></h3>
 <h3><a href = 'https://lesechka.github.io/reveal.js/'> https://lesechka.github.io/reveal.js/</a></h3>
+<aside class = 'notes'>Hello! I’m Alesia and I want to tell you about CSS Grid Layout. </aside>
 				</section>
 				<section class = 'slide2'>
 					<p> <b>CSS Grid Layout</b> is a new, powerful layout system
@@ -35,11 +36,21 @@
 <p>This CSS module defines a two-dimensional grid-based layout system,
 	optimized for user interface design.
 </p>
+<aside class = 'notes'>
+In the grid layout model, the children of a grid container can be positioned into
+arbitrary slots in a predefined flexible or fixed-size layout grid.
+</aside>
 				</section>
 				<section class = 'slide3'>
 					<p>The 'modern' CSS Grid Layout specification began as a first public
 						  working draft published on 7 April 2011.</p>
-					TABLE -> FLOAT -> POSITIONING AND INLINE-BLOCK -> BOX MODEL -> CSS flex box -> CSS grid layout
+					<p>TABLE -> FLOAT -> POSITIONING AND INLINE-BLOCK -> BOX MODEL -> CSS flex box -> CSS grid layout</p>
+					<aside class = 'notes'> CSS Grid  was first presented to W3C by a Microsoft team in 2012.
+The  Microsoft team also presented a real implementation of the grid layout.
+Several people started playing with it and spreading the word about it.
+Creators of CSS Grid think that grid-based layouts have been a goal of CSS.
+ Flexbox helped out, but it's intended for simpler one-dimensional layouts.
+</aside>
 				</section>
 					<section class = 'slide4'>
 						<h2>Groups of properties</h2>
@@ -48,6 +59,10 @@
 <li>Gaps</li>
 <li>Aligning things</li>
 <li>The implicit grid</li>
+<aside class = 'notes'>The syntax for CSS Grid Layout isn’t easy to remember.
+	 But you should know it to be confident when you use CSS Grid.
+To use CSS Grid effectively, you need to remember its properties and values.
+</aside>
 </section>
 					<section class = 'slide5'>
 						<section class = 'slide5-1'>
@@ -57,14 +72,24 @@
 							<li>grid-template-columns</li>
               <li>grid-template-rows</li>
           </ol>
+					<aside class = 'notes'> If you declare the number of rows and columns
+						in your grid, the grid is explicit. grid-template-columns lets you
+						define the number of columns.grid-template-rows lets you define the number of rows.</aside>
 				</section>
 					<section class = 'slide5-2'>
 					<img src = 'assets/slide5-2.png' height = '300' width = '900'>
 					<p>grid-template-columns create a new column for each length value you add to it.
 grid-template-rows work the same way. </p>
+
+<aside class = 'notes'>grid-template-columns create a new column
+	for each length value you add to it. In the grid-template-columns
+	declaration above, we have four 1fr values. This means four columns.
+grid-template-rows work the same way.</aside>
 				</section>
 					<section class = 'slide5-3'>
 						<img src = 'assets/slide5-3.png' height = '500' width = '900'>
+						<aside class = 'notes'>This creates a grid with four columns and three rows.
+</aside>
         </section>
 			</section>
 			<section class = 'slide6'>
@@ -75,6 +100,7 @@ grid-template-rows work the same way. </p>
 						<li>grid-column</li>
 					  <li>grid-row</li>
 					</ol>
+					<aside class = 'notes'>These two properties can only be used on a grid item.</aside>
 				</section>
 				<section class = 'slide6-2'>
 				<img src = 'assets/slide6-2.png' height = '400' width = '1000' >
@@ -102,6 +128,8 @@ grid-template-rows work the same way. </p>
 				<section class = 'slide7-1'>
 <h2>Positioning items in named areas</h2>
 <p>To create a grid area, you should use grid-template-areas on the grid.</p>
+<aside class = 'notes'>You can name parts of your grid if you don’t like
+	counting rows and columns. These named parts are called grid areas. </aside>
 </section>
 <section class = 'slide7-2'>
 <h3>Some notes on creating grid areas:</h3>
@@ -114,12 +142,17 @@ grid-template-rows work the same way. </p>
 </section>
 <section class = 'slide7-3'>
 <img src = 'assets/slide7-3.png' height = '250' width = '900'>
-<p>To place items <b>in</b> a grid area, you use the grid-area property on the grid item.
-To place items <b>on</b> a grid-area, you use grid-area.
-</p>
+<aside class = 'notes'>The example below has three grid areas:
+1.	header on the first two and takes up 4 columns
+2.	main on the second row and takes up the middle 2 columns
+3.	footer on the third row and takes up 4 columns
+</aside>
 </section>
 <section class = 'slide7-4'>
 <img src = 'assets/slide7-4.png' height = '300' width = '900'>
+<p>To place items <b>IN</b> a grid area, you use the grid-area property on the grid item.
+To place items <b>ON</b> a grid-area, you use grid-area.
+</p>
 </section>
 <section class = 'slide7-5' >
 	<img src = 'assets/slide7-5.png' height = '500' width = '1000'>
@@ -134,10 +167,16 @@ To place items <b>on</b> a grid-area, you use grid-area.
   <li>grid-row-gap</li>
   <li>grid-gap</li>
 </ol>
+<aside class = 'notes'>When you create a grid, you can create spaces between
+	columns and rows. These spaces are called gaps.
+	 grid-column-gap determines the space between columns.
+grid-row-gap determines the space between rows.
+</aside>
 				</section>
 				<section class = 'slide8-2'>
 					<img src = 'assets/slide8-2-1.png' height = '300' width = '300'>
 					<img src = 'assets/slide8-2-2.png' height = '300' width = '300'>
+					<aside class = 'notes'>grid-gap is a shorthand for grid-column-gap and grid-row-gap.</aside>
 				</section>
 				<section class = 'slide8-3'>
 					<img src = 'assets/slide8-3.png' height = '500' width = '1000'>
@@ -154,6 +193,10 @@ To place items <b>on</b> a grid-area, you use grid-area.
 					  <li>justify-self</li>
 					  <li>align-self</li>
 </ol>
+<aside class = 'notes'>You can see two groups of patterns here:
+•	The first group is justify vs align
+•	The second group is content, items, and self
+</aside>
 </section>
 				<section class = 'slide9-2'>
 					<h2>Two groups of patterns:</h2>
@@ -170,6 +213,9 @@ To place items <b>on</b> a grid-area, you use grid-area.
   <li>The block-axis</li>
 </ol>
 <p>Inline-axis reads left to right. Block-axis reads top to bottom</p>
+<aside class = 'notes'>When you justify something, you’re changing the
+	alignment according to the inline-axis. When you align something, you’re
+	changing the alignment according to the block-axis.</aside>
 				</section>
 				<section class = 'slide9-4'>
 					<img src = 'assets/slide9-4.png' height = '400' width = '800'>
@@ -184,9 +230,20 @@ To place items <b>on</b> a grid-area, you use grid-area.
 	<p>justify-content and align-content lets you align the grid itself
 		to the available space outside of the grid.</p>
 	<img src = 'assets/slide9-5.png' height = '250' width = '900'>
+	<aside class = 'notes'>You will only need these properties if your grid is
+		smaller than its defined area. (Which is rare).</aside>
 </section>
 <section class = 'slide9-6'>
 	<img src = 'assets/slide9-6.png' height = '600' width = '1000'>
+	<aside class = 'notes'>You can pick from seven values:
+1.	start: flush grid to the start of the axis
+2.	end: flushed grid to the end of the axis
+3.	center: align grid to the center of the axis
+4.	stretch: grid fills the axis (this is the default value)
+5.	space-between: spreads whitespace between grid items. No whitespace on at the ends
+6.	space-around: spreads whitespace around each grid item
+7.	space-evenly: spreads whitespace evenly around all grid items including the ends
+</aside>
 </section>
 <section class = 'slider9-7' height = '300' width = '1000'>
 	<p>justify-items and align-items lets you align grid-items
@@ -195,6 +252,12 @@ To place items <b>on</b> a grid-area, you use grid-area.
 </section>
 <section class = 'slide9-8'>
 	<img src = 'assets/slide9-8.png' height = '600' width = '600'>
+	<aside class = 'notes'>You can pick from the same four values:
+1.	start: flush item to the start of the axis
+2.	end: flushed item to the end of the axis
+3.	center: align item to the center of the axis
+4.	stretch: fills the axis (this is the default value)
+</aside>
 </section>
 <section class = 'slide9-9'>
 	<p>justify-self and align-self does the same thing as justify-items
@@ -207,10 +270,15 @@ To place items <b>on</b> a grid-area, you use grid-area.
 				<section class = 'slider10-1'>
 					<h2>Implicit Grid</h2>
 					<img src = 'assets/slide10-1.png' height = '250' width = '1000'>
+					<aside class = 'notes'>Let’s say you created a CSS Grid, but you don’t
+						have enough rows. In this example an explicit grid was created for three items. </aside>
 				</section>
 				<section class = 'slider10-2'>
 					<h2>But we have six items!</h2>
 					<img src = 'assets/slide10-2.png' height = '400' width = '1000'>
+					<aside class = 'notes'>When you don’t have enough space in your explicit
+						grid, CSS Grid will help you create additional grids automatically.
+						By default, it’ll create more rows.</aside>
 				</section>
 				<section class = 'slider10-3'>
 					<p><b>You can adjust the automatically created column(s) <br>
@@ -234,6 +302,8 @@ To place items <b>on</b> a grid-area, you use grid-area.
 							<li>easy to achieve more complicated layouts as you can work with columns and rows simultaneously;</li>
 							<li>the current support is at 88.3% of the global website traffic, so it is definitely okay.</li>
 						</ul>
+						<aside class = 'notes'>So if you still have that question
+							"Why CSS Grid?" here are a few points I would like to sum it up for you:</aside>
 </section>
 <section class = 'slide12'>
 	<h3>Sources:</h3>
@@ -244,9 +314,12 @@ To place items <b>on</b> a grid-area, you use grid-area.
 		<li>https://www.smashingmagazine.com/2018/04/best-practices-grid-layout/</li>
 		<li>https://zellwk.com/blog/remember-css-grid-properties/</li>
 </ul>
+<aside class = 'notes'>In my view, I do think CSS Grid Layout is best way
+	to create a layout for web page, especially if you combine it with Flexbox.</aside>
 </section>
 <section class = 'slide13'>
 	<h1>Thanks for attention!</h1>
+	<aside class = 'notes'>So I suppose you enjoy my presentation. Thank you for attention!</aside>
 </section>
 			</div>
 		</div>
